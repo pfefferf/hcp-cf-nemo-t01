@@ -1,0 +1,8 @@
+---
+applications:
+- name: hcp-cf-nemo-t01
+  buildpack: nodejs_buildpack
+  command: node app.js
+  memory: 128M
+  disk_quota: 128M
+  host: hcp-cf-nemo-t01

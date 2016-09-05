@@ -1,0 +1,14 @@
+{
+  "name": "hcp-cf-nemo-t01",
+  "version": "0.0.1",
+  "engines": {
+    "node": "6.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cfenv": "^1.0.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.10",
+    "path": "^0.12.7"
+  }
+}
