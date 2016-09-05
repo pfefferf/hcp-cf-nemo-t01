@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+
+    <Dialog title="{i18n>addUser}">
+		<content>
+	    	<form:SimpleForm id="objectForm">
+		    	<form:content>
+		    		<Label text="{i18n>id}"/>
+		    		<Input id="ipID" type="Number" maxLength="10"/>
+		    		<Label text="{i18n>userName}"/>
+		    		<Input id="ipUserName" maxLength="20"/>
+		    		<Label text="{i18n>lastName}"/>
+		    		<Input id="ipLastName" tmaxLength="100"/>
+		    		<Label text="{i18n>firstName}"/>
+		    		<Input id="ipFirstName" maxLength="100"/>                    
+		    	</form:content>
+	   		</form:SimpleForm>  
+		</content> 
+		<beginButton>
+			<Button text="{i18n>save}" press="onSaveAddUserDialog"/>
+		</beginButton> 		
+		<endButton>
+			<Button text="{i18n>cancel}" press="onCloseAddUserDialog"/>		
+		</endButton>
+    </Dialog>
+
+</core:FragmentDefinition>

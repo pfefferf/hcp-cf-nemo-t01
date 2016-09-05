@@ -1,0 +1,43 @@
+<mvc:View 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core" 
+	height="100%"
+	displayBlock="true" 
+	controllerName="de.fpf.hcpcf.nodemongot01.controller.App">
+	<App>
+		<pages>
+			<tnt:ToolPage id="toolPage">
+				<tnt:header>
+					<tnt:ToolHeader>
+						<Button icon="sap-icon://menu2" press="onPressSideNavigationToggleButton" type="transparent">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+						<ToolbarSpacer width="40%"/>
+						<Text text="{i18n>appTitle}"></Text>
+					</tnt:ToolHeader>			
+				</tnt:header>
+
+				<tnt:sideContent>
+					<tnt:SideNavigation id="sideNavigation" itemSelect="onItemSelect">
+						<tnt:item>
+							<tnt:NavigationList>
+								<tnt:NavigationListItem key="info" text="{i18n>information}" icon="sap-icon://message-information">
+								</tnt:NavigationListItem>
+								<tnt:NavigationListItem key="users" text="{i18n>users}" icon="sap-icon://employee">
+								</tnt:NavigationListItem>								
+							</tnt:NavigationList>
+						</tnt:item>
+					</tnt:SideNavigation>
+				</tnt:sideContent>
+				<tnt:mainContents>
+					<NavContainer id="navContainer">
+					</NavContainer>
+				</tnt:mainContents>
+			</tnt:ToolPage>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,47 @@
+<mvc:View 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="de.fpf.hcpcf.nodemongot01.controller.user.Users">
+
+    <Page showHeader="false">
+        <content>
+	        <Table id="userTable" items="{ path: '/', sorter: { path: 'id' } }">
+		        <headerToolbar>
+			        <Toolbar>
+				        <Title text="{i18n>users}"/>
+                        <ToolbarSpacer/>                        
+                        <Button icon="sap-icon://add" press="onAddUser"/>
+                        <Button icon="sap-icon://refresh" press="onRefreshUser"/>
+			        </Toolbar>
+		        </headerToolbar>
+		        <columns>
+			        <Column>
+				        <Text text="{i18n>id}" />
+			        </Column>
+			        <Column>
+			        	<Text text="{i18n>userName}" />
+			        </Column>
+			        <Column>
+				        <Text text="{i18n>lastName}" />
+			        </Column>     
+			        <Column>
+				        <Text text="{i18n>firstName}" />
+			        </Column>  
+                    <Column hAlign="Right">
+                    </Column>                 
+		        </columns>
+		        <items>
+			        <ColumnListItem>
+				        <cells>
+                            <Text text="{id}"/>
+                            <Text text="{user_name}"/>
+                            <Text text="{last_name}"/>
+                            <Text text="{first_name}"/>
+                            <Button icon="sap-icon://delete" press="onDeleteUser"/>
+				        </cells>
+			        </ColumnListItem>
+		        </items>
+	        </Table>
+        </content>
+    </Page>
+</mvc:View>

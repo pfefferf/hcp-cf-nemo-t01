@@ -1,0 +1,105 @@
+{
+	"_version": "1.3.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "de.fpf.hcpcf.nodemongot01",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"rootView": {
+			"viewName": "de.fpf.hcpcf.nodemongot01.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"handleValidation": true,
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.40",
+			"libs": {
+				"sap.ui.core": {
+					"minVersion": "1.40.0"
+				},
+				"sap.m": {
+					"minVersion": "1.40.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.40.0"
+				}
+			}
+		},
+		"models": {			
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "de.fpf.hcpcf.nodemongot01.i18n.i18n"
+				}
+			}
+		},     
+		"resources":{ 
+            "css": [{
+                "uri": "css/style.css"
+            }]
+        },		   
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "de.fpf.hcpcf.nodemongot01.view",
+				"controlId": "navContainer",
+				"controlAggregation": "pages",
+				"transition": "show"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "information",
+					"target": [
+						"information"
+					]
+				},
+				{
+					"pattern": "Users",
+					"name": "users",
+					"target": [
+						"users"
+					]
+				}
+			],
+			"targets": {
+				"information": {
+					"viewName": "info.Information",
+					"viewLevel": 1,
+					"viewId": "information"
+				},
+				"users": {
+					"viewName": "user.Users",
+					"viewId": "users",
+					"viewLevel": 1
+				}
+			}
+		}		
+	}
+}
