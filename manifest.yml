@@ -6,4 +6,6 @@ applications:
   memory: 128M
   disk_quota: 128M
   host: hcp-cf-nemo-t01
+  services:
+  - mongodb-nemo-t01-service
   
