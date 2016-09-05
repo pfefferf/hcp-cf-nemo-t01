@@ -17,6 +17,9 @@ oApp.use(bodyParser.json());
 // connect to mongodb
 require('./server/db/mongo-connect.js')(oAppEnv);
 
+// api
+require('./server/api/info/info.js')(oApp, oAppEnv);
+
 // express app listener
 oApp.listen(oAppEnv.port, function(){
     console.log('Server listening at ' + oAppEnv.url);
