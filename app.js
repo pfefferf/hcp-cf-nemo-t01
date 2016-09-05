@@ -14,7 +14,11 @@ let oAppEnv = cfenv.getAppEnv();
 oApp.use(bodyParser.urlencoded({extended: false}));
 oApp.use(bodyParser.json());
 
+// connect to mongodb
+require('./server/db/mongo-connect.js')(oAppEnv);
+
 // express app listener
 oApp.listen(oAppEnv.port, function(){
     console.log('Server listening at ' + oAppEnv.url);
 });
+
