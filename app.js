@@ -20,6 +20,9 @@ oApp.use(express.static(__dirname + '/client/public/webapp'));
 // connect to mongodb
 require('./server/db/mongo-connect.js')(oAppEnv);
 
+// client express routes
+require('./client/routes/routes.js')(oApp);
+
 // api
 require('./server/api/info/info.js')(oApp, oAppEnv);
 require('./server/api/users/users.js')(oApp);
