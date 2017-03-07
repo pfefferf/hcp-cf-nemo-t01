@@ -11,7 +11,7 @@
     "url": "git://github.com/pfefferf/hcp-cf-nemo-t01.git"
   },  
   "engines": {
-    "node": "6.2.1"
+    "node": "7.1.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
